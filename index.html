@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Hackerman Challenge</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="background">
+        <img src="img/Star Wars Background.png" alt="Background image" />
+      </div>
+      <div class="logo">
+        <img src="img/Logo Star Wars.png" alt="" />
+      </div>
+      <div class="card">
+        <h1>Olá!</h1>
+        <p>Para começar seu teste, digite um e-mail:</p>
+          <form name="email">
+        <input
+          type="email"
+          name="email"
+          required
+          id="inp"
+          placeholder="exemplo@email.com"
+          onblur="validaEmail()"
+        />
+        <div id="msgemail"></div>
+        <button type="submit" id="sub" onclick="redirect()">Próximo</button>
+      </div>
+    </form>
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <script src="index.js"></script>
+  </body>
+</html>

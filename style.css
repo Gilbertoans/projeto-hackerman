@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: black;
+  font-family: 'Lato', sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 1600px;
+  align-items: center;
+}
+.background {
+  opacity: 0.2;
+  background-attachment: fixed;
+  background-position: center;
+  z-index: -100000;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 360px;
+}
+.logo img {
+  max-width: 360px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 80px;
+  margin-bottom: 73px;
+}
+
+.card {
+  min-width: 360px;
+  max-width: 25.265rem;
+  max-height: 15.25rem;
+  border-radius: 8px;
+  padding: 24px;
+  background-color: #232323;
+  box-shadow: 10px 5px 5px black;
+}
+
+.card h1 {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 36px;
+  color: #cecece;
+  max-width: 358px;
+  margin-bottom: 8px;
+}
+
+.card p {
+  font-weight: normal;
+  max-width: 358px;
+  font-size: 20px;
+  line-height: 24px;
+  color: #cecece;
+  margin-bottom: 24px;
+}
+.card input {
+  height: 32px;
+  width: 358px;
+  background: #353535;
+  border: 1px solid rgba(255, 232, 31, 0.3);
+  border-radius: 8px;
+  margin-bottom: 24px;
+  padding: 5px;
+}
+
+#msgemail,
+#msgerro {
+  width: 366px;
+  height: 17px;
+  color: #c47768;
+}
+
+.card button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  width: 362px;
+  height: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  background-color: #ffe81f;
+  color: black;
+}
+
+.card2 {
+  min-width: 410px;
+  max-width: 410px;
+  max-height: 664px;
+  border-radius: 8px;
+  padding: 24px;
+  background-color: #232323;
+  box-shadow: 10px 5px 5px black;
+}
+
+.card2 button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  width: 362px;
+  height: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  background-color: #ffe81f;
+  color: black;
+}
+
+#sub2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: -50px;
+  width: 362px;
+  height: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  background-color: #ffe81f;
+  color: black;
+}
+
+.card2 h1 {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 36px;
+  color: #cecece;
+  max-width: 358px;
+  margin-bottom: 8px;
+}
+
+.card2 p {
+  font-weight: normal;
+  max-width: 358px;
+  font-size: 20px;
+  line-height: 24px;
+  color: #cecece;
+  margin-bottom: 24px;
+}
+
+#filmes {
+  width: 166px;
+  height: 104px;
+  border-radius: 5px;
+}

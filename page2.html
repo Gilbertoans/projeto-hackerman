@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Hackerman Challenge</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="background">
+        <img src="img/Star Wars Background.png" alt="Background image" />
+      </div>
+      <div class="logo">
+        <img src="img/Logo Star Wars.png" alt="" />
+      </div>
+      <div class="card">
+        <p>Agora, digite seu personagem favorito de Star Wars</p>
+          <form name="personagem">
+        <input
+          type="text"
+          name="personagem"
+          required
+          id="pers"
+          placeholder="Darth Vader"
+       
+        />
+        <div id="msgerro"></div>
+       
+      </div>
+    </form>
+    <button type="button" id="sub2" onclick="getpersonagem()">Próximo</button>
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <script src="index.js"></script>
+  </body>
+</html>

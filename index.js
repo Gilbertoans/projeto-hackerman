@@ -24,19 +24,22 @@ function validaPersonagem() {
   }
 }
 var urlperson = ''
+var idperson = null
 
 async function getpersonagem() {
+  console.log('proximo')
   const personag = document.querySelector('#pers').value
   const result = await fetch('https://swapi.dev/api/people/')
     .then(resp => resp.json())
     .then(async function (data) {
       console.log(data)
       const person = await data.results
-      //console.log(person)
+      console.log(person)
+      console.log(personag)
       person.forEach(function (element) {
         if (element.name == personag) {
           console.log(element)
-          urlperson = data.results.homeworld
+          urlperson = element.url
           console.log(urlperson)
           window.location.href = '../resultado.html'
           requer()
@@ -47,12 +50,14 @@ async function getpersonagem() {
     })
 }
 
-var filmes = document.querySelector('#filmes')
-var naves = document.querySelector('#naves')
-
 async function requer() {
+  var filmes = document.querySelector('#filmes')
+  var naves = document.querySelector('#naves')
+  var veiculos = document.querySelector('#veiculos')
+  var especies = document.querySelector('#especie')
+  var planeta = document.querySelector('#planeta')
   console.log('teste')
-  const result = await fetch(urlperson)
+  const result = await fetch('https://swapi.dev/api/people/1/')
     .then(resp => resp.json())
     .then(async function (data) {
       console.log(data)
@@ -60,6 +65,8 @@ async function requer() {
         const listfilm = await fetch(element)
           .then(resp => resp.json())
           .then(function (data1) {
+            //console.log(data1)
+
             filmes.innerHTML += data1.title + '<br>'
           })
         const result1 = await listfilm
@@ -77,6 +84,39 @@ async function requer() {
         console.log(result1)
         return data
       })
+
+      data.vehicles.forEach(async function (element) {
+        const listfilm = await fetch(element)
+          .then(resp => resp.json())
+          .then(function (data1) {
+            veiculos.innerHTML += data1.name + '<br>'
+          })
+        const result1 = await listfilm
+        console.log(result1)
+        return data
+      })
+
+      data.species.forEach(async function (element) {
+        const listfilm = await fetch(element)
+          .then(resp => resp.json())
+          .then(function (data1) {
+            especies.innerHTML += data1.name + '<br>'
+          })
+        const result1 = await listfilm
+        console.log(result1)
+        return data
+      })
+
+      data.planet.forEach(async function (element) {
+        const listfilm = await fetch(element)
+          .then(resp => resp.json())
+          .then(function (data1) {
+            planeta.innerHTML += data1.name + '<br>'
+          })
+        const result1 = await listfilm
+        console.log(result1)
+        return data
+      })
     })
     .catch(function (error) {
       console.log(error)
@@ -87,4 +127,4 @@ async function requer() {
   const listaFilme = data.films
   //dadosFilme(listaFilme)
 }
-//requer()
+requer()

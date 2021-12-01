@@ -23,23 +23,25 @@
       </div>
       <div class="card">
         <h1>Olá!</h1>
+        <form name="email">
         <p>Para começar seu teste, digite um e-mail:</p>
-          <form name="email">
         <input
           type="email"
           name="email"
           required
           id="inp"
           placeholder="exemplo@email.com"
-          onblur="validaEmail()"
-        />
+          />
+          <!-- onblur="validaEmail()" -->
+        
         <div id="msgemail"></div>
         <button type="submit" id="sub" onclick="redirect()">Próximo</button>
+        </form>
       </div>
     </form>
     </div>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
-    <script src="index.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>

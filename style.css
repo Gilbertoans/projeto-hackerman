@@ -72,7 +72,7 @@ body {
   background: #353535;
   border: 1px solid rgba(255, 232, 31, 0.3);
   border-radius: 8px;
-  margin-bottom: 24px;
+  margin-bottom: 3rem;
   padding: 5px;
 }
 
@@ -141,7 +141,7 @@ body {
   line-height: 36px;
   color: #cecece;
   max-width: 358px;
-  margin-bottom: 8px;
+  margin-bottom: 1px;
 }
 
 .card2 p {
@@ -153,8 +153,40 @@ body {
   margin-bottom: 24px;
 }
 
-#filmes {
-  width: 166px;
-  height: 104px;
-  border-radius: 5px;
+.card2 label {
+  color: #cecece;
+  font-size: 20px;
+}
+
+.filmes {
+  margin-top: 1px;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid;
+  overflow-y: auto;
+}
+
+.itemfilmes {
+  color: rgb(133, 128, 128);
+  font-size: 0.9rem;
+}
+
+.btnPesquisar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+
+  width: 362px;
+  height: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  background-color: #ffe81f;
+  color: black;
+}
+.btnPesquisar a {
+  text-decoration: none;
 }

@@ -21,25 +21,49 @@
       <div class="logo">
         <img src="img/Logo Star Wars.png" alt="" />
       </div>
-      <div class="card">
+      <div class="card" id="card">
         <p>Agora, digite seu personagem favorito de Star Wars</p>
-          <form name="personagem">
+
         <input
           type="text"
           name="personagem"
           required
           id="pers"
           placeholder="Darth Vader"
-       
         />
         <div id="msgerro"></div>
-       
+
+        <button type="button" id="sub2" onclick="getpersonagem()">
+          Próximo
+        </button>
       </div>
-    </form>
-    <button type="button" id="sub2" onclick="getpersonagem()">Próximo</button>
+
+      <div class="card2" id="card2" style="display: none">
+        <h1>
+          Informações sobre
+          <div id="personagem"></div>
+          :
+        </h1>
+
+        <label>Filmes:</label>
+        <div id="filmes" class="filmes">
+          <ul class="itemfilmes"></ul>
+        </div>
+        <p>Naves</p>
+        <div id="naves"></div>
+        <p>Veículos</p>
+        <div id="veiculos"></div>
+        <p>Espécie</p>
+        <div id="especie"></div>
+        <p>Planeta</p>
+        <div id="planeta"></div>
+        <div class="btnPesquisar">
+          <li><a href="./page2.html">Pesquisar novamente</a></li>
+        </div>
+      </div>
     </div>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
-    <script src="index.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
